@@ -1,0 +1,428 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Evaluation tasks for GitHub-operating agents",
+    "repo": "acme-agent-evals",
+    "total_tasks": 25,
+    "note": "Issue/PR numbers use placeholder syntax resolved at runtime by resolve_numbers.py."
+  },
+  "tasks": [
+    {
+      "id": "T01",
+      "tier": 1,
+      "category": "read",
+      "expected_steps": 2,
+      "description": "How many open issues in this repo are labeled `bug`?",
+      "expected_output": {
+        "type": "exact",
+        "value": 5,
+        "explanation": "Open bugs: OTLP timeout (#{{ISSUE_OTLP_TIMEOUT}}), Batch shutdown (#{{ISSUE_BATCH_SHUTDOWN}}), Config crash (#{{ISSUE_CONFIG_CRASH}}), CI Python 3.12 (#{{ISSUE_CI_PYTHON312}}), JSON unicode (#{{ISSUE_JSON_UNICODE}})."
+      }
+    },
+    {
+      "id": "T02",
+      "tier": 1,
+      "category": "read",
+      "expected_steps": 2,
+      "description": "How many comments does the issue titled 'OTLP exporter fails silently on connection timeout' have?",
+      "expected_output": {
+        "type": "exact",
+        "value": 2,
+        "explanation": "setup_github.sh adds exactly 2 comments to the OTLP timeout issue; it is the only issue with any comments."
+      }
+    },
+    {
+      "id": "T03",
+      "tier": 1,
+      "category": "read",
+      "expected_steps": 2,
+      "description": "What is the title of the most recently opened pull request?",
+      "expected_output": {
+        "type": "exact",
+        "value": "Draft: gRPC transport for OTLP",
+        "explanation": "PR #{{PR_GRPC_DRAFT}} is the most recently created PR."
+      }
+    },
+    {
+      "id": "T04",
+      "tier": 1,
+      "category": "read",
+      "expected_steps": 2,
+      "description": "Is issue #{{ISSUE_README_TYPO}} (Typo in README.md) assigned to anyone?",
+      "expected_output": {
+        "type": "exact",
+        "value": "no",
+        "explanation": "The README typo issue has no assignee."
+      }
+    },
+    {
+      "id": "T05",
+      "tier": 1,
+      "category": "read",
+      "expected_steps": 2,
+      "description": "What labels are on the issue titled 'OTLP exporter fails silently on connection timeout'?",
+      "expected_output": {
+        "type": "exact",
+        "value": [
+          "bug",
+          "exporter"
+        ],
+        "explanation": "The OTLP timeout issue has bug and exporter labels."
+      }
+    },
+    {
+      "id": "T06",
+      "tier": 2,
+      "category": "read",
+      "expected_steps": 6,
+      "description": "List all open issues labeled `bug` and check if any of them have a linked pull request. Which bugs have fixes in progress?",
+      "expected_output": {
+        "type": "structured",
+        "value": {
+          "bugs_with_prs": [
+            "Batch exporter drops last batch on shutdown",
+            "CI workflow doesn't run on Python 3.12"
+          ],
+          "bugs_without_prs": [
+            "OTLP exporter fails silently on connection timeout",
+            "Config file parser crashes on empty values",
+            "JSON file exporter doesn't handle unicode properly"
+          ]
+        },
+        "explanation": "The batch shutdown bug has PR #{{PR_FIX_BATCH}}, the CI bug has PR #{{PR_CI_MATRIX}}. The OTLP timeout and config crash bugs have no PRs."
+      }
+    },
+    {
+      "id": "T07",
+      "tier": 2,
+      "category": "read",
+      "expected_steps": 3,
+      "description": "Look at the last 10 merged PRs. What percentage of them modified files in the `tests/` directory?",
+      "expected_output": {
+        "type": "exact",
+        "value": 0,
+        "explanation": "setup_github.sh creates 3 open PRs but no merged PRs. The agent should report 0 merged PRs."
+      }
+    },
+    {
+      "id": "T08",
+      "tier": 2,
+      "category": "read",
+      "expected_steps": 3,
+      "description": "Find all open issues assigned to Alice. How many are bugs vs. enhancements?",
+      "expected_output": {
+        "type": "structured",
+        "value": {
+          "total": 0,
+          "bugs": 0,
+          "enhancements": 0,
+          "issues": []
+        },
+        "explanation": "No issues are assigned to Alice — the setup script's assignee calls silently fail because the users don't exist on GitHub."
+      }
+    },
+    {
+      "id": "T09",
+      "tier": 2,
+      "category": "read",
+      "expected_steps": 4,
+      "description": "Which open issues are part of the v2.0 milestone? List them with their titles and labels.",
+      "expected_output": {
+        "type": "structured",
+        "value": [
+          {
+            "title": "Add support for custom span attributes",
+            "labels": [
+              "enhancement"
+            ]
+          },
+          {
+            "title": "Add retry configuration to client constructor",
+            "labels": [
+              "enhancement"
+            ]
+          },
+          {
+            "title": "Add gRPC transport option for OTLP exporter",
+            "labels": [
+              "enhancement",
+              "exporter"
+            ]
+          },
+          {
+            "title": "Add metrics collection support",
+            "labels": [
+              "enhancement",
+              "v2.0"
+            ]
+          }
+        ],
+        "explanation": "Four open issues are in the v2.0 milestone."
+      }
+    },
+    {
+      "id": "T10",
+      "tier": 2,
+      "category": "read",
+      "expected_steps": 5,
+      "description": "Are there any open PRs that don't have at least one review? List them.",
+      "expected_output": {
+        "type": "structured",
+        "value": [
+          "Add Python 3.12 to CI matrix",
+          "Draft: gRPC transport for OTLP"
+        ],
+        "explanation": "PR #{{PR_FIX_BATCH}} has an approval from Bob. PRs #{{PR_CI_MATRIX}} and #{{PR_GRPC_DRAFT}} have no reviews."
+      }
+    },
+    {
+      "id": "T11",
+      "tier": 2,
+      "category": "read",
+      "expected_steps": 4,
+      "description": "Find all issues labeled `exporter`. How many are open vs. closed?",
+      "expected_output": {
+        "type": "structured",
+        "value": {
+          "open": 4,
+          "closed": 3,
+          "open_titles": [
+            "OTLP exporter fails silently on connection timeout",
+            "Console exporter output is not configurable",
+            "Add gRPC transport option for OTLP exporter",
+            "JSON file exporter doesn't handle unicode properly"
+          ]
+        },
+        "explanation": "4 open exporter issues, 3 closed."
+      }
+    },
+    {
+      "id": "T12",
+      "tier": 3,
+      "category": "write",
+      "expected_steps": 4,
+      "description": "Create a new issue titled 'Add request timeout configuration' with the label `enhancement`, and add it to the v2.0 milestone.",
+      "expected_output": {
+        "type": "state_check",
+        "checks": [
+          "Issue exists with exact title 'Add request timeout configuration'",
+          "Issue has the 'enhancement' label",
+          "Issue is in the v2.0 milestone",
+          "Issue is open"
+        ]
+      }
+    },
+    {
+      "id": "T13",
+      "tier": 3,
+      "category": "write",
+      "expected_steps": 10,
+      "description": "The word 'recieve' appears in README.md. Create a branch called `fix/readme-typo`, fix the typo, commit with an appropriate message, push, and open a PR that references issue #{{ISSUE_README_TYPO}}.",
+      "expected_output": {
+        "type": "state_check",
+        "checks": [
+          "Branch fix/readme-typo exists on remote",
+          "README.md on that branch has 'receive' (not 'recieve')",
+          "A PR exists from fix/readme-typo to main",
+          "PR body or title references issue #{{ISSUE_README_TYPO}}",
+          "Commit message is descriptive (e.g., 'fix: correct typo in README.md')"
+        ],
+        "note": "Issue #{{ISSUE_README_TYPO}} is the typo issue. Agent should reference it."
+      }
+    },
+    {
+      "id": "T14",
+      "tier": 3,
+      "category": "write",
+      "expected_steps": 4,
+      "description": "Add the label `needs-triage` to issues #{{ISSUE_CONFIG_CRASH}} and #{{ISSUE_JSON_UNICODE}}.",
+      "expected_output": {
+        "type": "state_check",
+        "checks": [
+          "Label 'needs-triage' exists (created if necessary)",
+          "Issue #{{ISSUE_CONFIG_CRASH}} has the 'needs-triage' label",
+          "Issue #{{ISSUE_JSON_UNICODE}} has the 'needs-triage' label"
+        ],
+        "note": "Issue #{{ISSUE_CONFIG_CRASH}} is the config crash bug, #{{ISSUE_JSON_UNICODE}} is the unicode bug."
+      }
+    },
+    {
+      "id": "T15",
+      "tier": 3,
+      "category": "write",
+      "expected_steps": 5,
+      "description": "Close issue #{{ISSUE_README_TYPO}} (the README typo) with a comment saying 'Fixed in PR #X' (use the actual PR number if one exists, otherwise note that no PR was found).",
+      "expected_output": {
+        "type": "state_check",
+        "checks": [
+          "Issue #{{ISSUE_README_TYPO}} is closed",
+          "Issue #{{ISSUE_README_TYPO}} has a comment referencing a PR number or stating no PR exists"
+        ]
+      }
+    },
+    {
+      "id": "T16",
+      "tier": 3,
+      "category": "write",
+      "expected_steps": 3,
+      "description": "Add a review comment to PR #{{PR_CI_MATRIX}} saying 'LGTM — just verify the 3.12 tests pass on the ARM runner too.'",
+      "expected_output": {
+        "type": "state_check",
+        "checks": [
+          "PR #{{PR_CI_MATRIX}} has a review or comment containing the specified text"
+        ]
+      }
+    },
+    {
+      "id": "T17",
+      "tier": 3,
+      "category": "write",
+      "expected_steps": 5,
+      "description": "Create a new label called `performance` with color `#ff9900` and description 'Performance-related issues', then apply it to issue #{{ISSUE_RETRY_CONFIG}}.",
+      "expected_output": {
+        "type": "state_check",
+        "checks": [
+          "Label 'performance' exists with color ff9900",
+          "Label has description 'Performance-related issues'",
+          "Issue #{{ISSUE_RETRY_CONFIG}} has the 'performance' label"
+        ],
+        "note": "Issue #{{ISSUE_RETRY_CONFIG}} is the retry config enhancement."
+      }
+    },
+    {
+      "id": "T18",
+      "tier": 4,
+      "category": "analysis",
+      "expected_steps": 8,
+      "description": "For each milestone in the repo (including closed ones), report the total number of issues, how many are open vs closed, and the completion percentage. Which milestone is fully complete?",
+      "expected_output": {
+        "type": "llm_judge",
+        "criteria": [
+          "Reports on v1.0.0 milestone: 3 issues, all closed, 100% complete",
+          "Reports on v1.1.0 milestone: 6 issues, all closed, 100% complete",
+          "Reports on v2.0 milestone: 4 issues, all open, 0% complete",
+          "Correctly identifies v1.0.0 and v1.1.0 as fully complete",
+          "Identifies v2.0 as the only incomplete milestone"
+        ]
+      }
+    },
+    {
+      "id": "T19",
+      "tier": 4,
+      "category": "analysis",
+      "expected_steps": 8,
+      "description": "Find all issues that have more than one label. For each, list the issue title and all its labels. Which label pair appears together most frequently?",
+      "expected_output": {
+        "type": "llm_judge",
+        "criteria": [
+          "Identifies multi-label issues including: #{{ISSUE_OTLP_TIMEOUT}} (bug,exporter), #{{ISSUE_BATCH_SHUTDOWN}} (bug,critical), #{{ISSUE_CONSOLE_CONFIG}} (enhancement,exporter), #{{ISSUE_OAUTH_DOCS}} (docs,good-first-issue), #{{ISSUE_GRPC_TRANSPORT}} (enhancement,exporter), #{{ISSUE_CI_PYTHON312}} (bug,ci), #{{ISSUE_METRICS}} (enhancement,v2.0), #{{ISSUE_JSON_UNICODE}} (bug,exporter)",
+          "Lists the correct labels for each issue",
+          "Identifies that bug+exporter is the most common pair (appears on #{{ISSUE_OTLP_TIMEOUT}}, #{{ISSUE_JSON_UNICODE}}, and closed issues #{{ISSUE_OTLP_BATCH_DROP}})",
+          "Also notes enhancement+exporter as a common pair (#{{ISSUE_CONSOLE_CONFIG}}, #{{ISSUE_GRPC_TRANSPORT}})",
+          "Includes both open and/or closed issues in the analysis"
+        ]
+      }
+    },
+    {
+      "id": "T20",
+      "tier": 4,
+      "category": "analysis",
+      "expected_steps": 8,
+      "description": "Which open issues are not assigned to any milestone? Group them by their primary label (bug, enhancement, docs). Are there any critical bugs without a milestone?",
+      "expected_output": {
+        "type": "llm_judge",
+        "criteria": [
+          "Identifies 8 open issues without a milestone: #{{ISSUE_OTLP_TIMEOUT}}, #{{ISSUE_OAUTH_DOCS}}, #{{ISSUE_BATCH_SHUTDOWN}}, #{{ISSUE_CONSOLE_CONFIG}}, #{{ISSUE_README_TYPO}}, #{{ISSUE_CONFIG_CRASH}}, #{{ISSUE_CI_PYTHON312}}, #{{ISSUE_JSON_UNICODE}}",
+          "Groups by label: bugs (#{{ISSUE_OTLP_TIMEOUT}}, #{{ISSUE_BATCH_SHUTDOWN}}, #{{ISSUE_CONFIG_CRASH}}, #{{ISSUE_CI_PYTHON312}}, #{{ISSUE_JSON_UNICODE}}), enhancements (#{{ISSUE_CONSOLE_CONFIG}}), docs (#{{ISSUE_OAUTH_DOCS}}, #{{ISSUE_README_TYPO}})",
+          "Flags #{{ISSUE_BATCH_SHUTDOWN}} as a critical bug without a milestone",
+          "Notes that all v2.0 milestone issues are enhancements, while most bugs have no milestone",
+          "Provides reasonable recommendations or observations about the gap"
+        ]
+      }
+    },
+    {
+      "id": "T21",
+      "tier": 4,
+      "category": "analysis",
+      "expected_steps": 10,
+      "description": "Audit the open PRs: for each one, report whether it has reviews, whether CI passed, whether there are merge conflicts, and how old it is.",
+      "expected_output": {
+        "type": "llm_judge",
+        "criteria": [
+          "Lists all 3 open PRs",
+          "Reports review status: PR #{{PR_FIX_BATCH}} approved, PR #{{PR_CI_MATRIX}} no reviews, PR #{{PR_GRPC_DRAFT}} no reviews (draft)",
+          "Reports CI status for each PR",
+          "Reports merge conflict status",
+          "Reports age or creation date for each PR"
+        ]
+      }
+    },
+    {
+      "id": "T22",
+      "tier": 4,
+      "category": "analysis",
+      "expected_steps": 8,
+      "description": "Find all issues that were opened and closed within the same milestone. What was the average time from open to close?",
+      "expected_output": {
+        "type": "llm_judge",
+        "criteria": [
+          "Identifies closed issues in v1.0.0 and v1.1.0 milestones",
+          "Computes time from open to close for each",
+          "Reports average time (likely very short since issues were created and closed in the same script run)",
+          "Notes that the timestamps may be artificial"
+        ]
+      }
+    },
+    {
+      "id": "T23",
+      "tier": 4,
+      "category": "analysis",
+      "expected_steps": 6,
+      "description": "Search for all issues that mention 'exporter' in their title. How do these compare to issues with the `exporter` label? Are there any mismatches — issues that mention 'exporter' but aren't labeled, or issues labeled `exporter` that don't mention it in the title?",
+      "expected_output": {
+        "type": "llm_judge",
+        "criteria": [
+          "Searches for issues with 'exporter' in the title",
+          "Lists issues with the exporter label",
+          "Identifies that most exporter-titled issues do have the label",
+          "Notes any mismatches (e.g., 'Batch exporter drops last batch on shutdown' #{{ISSUE_BATCH_SHUTDOWN}} mentions exporter in title but does not have the exporter label)",
+          "Provides a clear comparison between the two sets"
+        ]
+      }
+    },
+    {
+      "id": "T24",
+      "tier": 4,
+      "category": "analysis",
+      "expected_steps": 8,
+      "description": "Which open issues have zero comments? Of those, which are bugs? Are there any bugs that seem urgent (labeled `critical`) but have no discussion at all?",
+      "expected_output": {
+        "type": "llm_judge",
+        "criteria": [
+          "Identifies that almost all open issues have zero comments (11 of 12)",
+          "Notes that issue #{{ISSUE_OTLP_TIMEOUT}} is the only one with comments (2 comments)",
+          "Lists the bugs with zero comments: #{{ISSUE_BATCH_SHUTDOWN}}, #{{ISSUE_CONFIG_CRASH}}, #{{ISSUE_CI_PYTHON312}}, #{{ISSUE_JSON_UNICODE}}",
+          "Flags #{{ISSUE_BATCH_SHUTDOWN}} as critical priority with no comments/discussion",
+          "Provides reasonable observations about the lack of triage activity"
+        ]
+      }
+    },
+    {
+      "id": "T25",
+      "tier": 4,
+      "category": "analysis",
+      "expected_steps": 8,
+      "description": "Compare the v1.0.0 and v1.1.0 milestones: how many issues were in each, what was the ratio of bugs to enhancements in each, and which milestone had broader scope?",
+      "expected_output": {
+        "type": "llm_judge",
+        "criteria": [
+          "Reports v1.0.0 milestone: 3 issues, all bugs",
+          "Reports v1.1.0 milestone: 6 issues, 2 bugs and 4 enhancements",
+          "Notes that v1.1.0 had broader scope (twice as many issues, mix of bugs and features)",
+          "v1.0.0 was purely a bugfix release while v1.1.0 was a feature release",
+          "Both milestones are fully closed with all issues resolved"
+        ]
+      }
+    }
+  ]
+}

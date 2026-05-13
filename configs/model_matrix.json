@@ -1,0 +1,32 @@
+[
+  {
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-0",
+    "family": "sonnet",
+    "version": "4.0"
+  },
+  {
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-5",
+    "family": "sonnet",
+    "version": "4.5"
+  },
+  {
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-6",
+    "family": "sonnet",
+    "version": "4.6"
+  },
+  {
+    "provider": "openai",
+    "model": "gpt-5",
+    "family": "gpt",
+    "version": "5"
+  },
+  {
+    "provider": "openai",
+    "model": "gpt-5.5",
+    "family": "gpt",
+    "version": "5.5"
+  }
+]
