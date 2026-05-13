@@ -8,7 +8,7 @@
         "exporter"
       ],
       "milestone": null,
-      "number": 1315,
+      "number": 21,
       "state": "open",
       "title": "JSON file exporter doesn't handle unicode properly"
     },
@@ -20,7 +20,7 @@
         "v2.0"
       ],
       "milestone": "v2.0",
-      "number": 1314,
+      "number": 20,
       "state": "open",
       "title": "Add metrics collection support"
     },
@@ -32,7 +32,7 @@
         "ci"
       ],
       "milestone": null,
-      "number": 1313,
+      "number": 19,
       "state": "open",
       "title": "CI workflow doesn't run on Python 3.12"
     },
@@ -43,7 +43,7 @@
         "bug"
       ],
       "milestone": null,
-      "number": 1312,
+      "number": 18,
       "state": "open",
       "title": "Config file parser crashes on empty values"
     },
@@ -55,7 +55,7 @@
         "exporter"
       ],
       "milestone": "v2.0",
-      "number": 1311,
+      "number": 17,
       "state": "open",
       "title": "Add gRPC transport option for OTLP exporter"
     },
@@ -67,7 +67,7 @@
         "good-first-issue"
       ],
       "milestone": null,
-      "number": 1310,
+      "number": 16,
       "state": "open",
       "title": "Typo in README.md"
     },
@@ -79,7 +79,7 @@
         "exporter"
       ],
       "milestone": null,
-      "number": 1309,
+      "number": 15,
       "state": "open",
       "title": "Console exporter output is not configurable"
     },
@@ -90,7 +90,7 @@
         "enhancement"
       ],
       "milestone": "v2.0",
-      "number": 1308,
+      "number": 14,
       "state": "open",
       "title": "Add retry configuration to client constructor"
     },
@@ -102,7 +102,7 @@
         "critical"
       ],
       "milestone": null,
-      "number": 1307,
+      "number": 13,
       "state": "open",
       "title": "Batch exporter drops last batch on shutdown"
     },
@@ -114,7 +114,7 @@
         "good-first-issue"
       ],
       "milestone": null,
-      "number": 1306,
+      "number": 12,
       "state": "open",
       "title": "Documentation for OAuth authentication is incomplete"
     },
@@ -125,7 +125,7 @@
         "enhancement"
       ],
       "milestone": "v2.0",
-      "number": 1305,
+      "number": 11,
       "state": "open",
       "title": "Add support for custom span attributes"
     },
@@ -137,7 +137,7 @@
         "exporter"
       ],
       "milestone": null,
-      "number": 1304,
+      "number": 10,
       "state": "open",
       "title": "OTLP exporter fails silently on connection timeout"
     },
@@ -148,7 +148,7 @@
         "enhancement"
       ],
       "milestone": "v1.1.0",
-      "number": 1303,
+      "number": 9,
       "state": "closed",
       "title": "Add OAuth 2.0 authentication support"
     },
@@ -159,7 +159,7 @@
         "enhancement"
       ],
       "milestone": "v1.1.0",
-      "number": 1302,
+      "number": 8,
       "state": "closed",
       "title": "Support batch processing for high-throughput workloads"
     },
@@ -171,7 +171,7 @@
         "exporter"
       ],
       "milestone": "v1.1.0",
-      "number": 1301,
+      "number": 7,
       "state": "closed",
       "title": "Add console/stdout exporter for debugging"
     },
@@ -183,7 +183,7 @@
         "exporter"
       ],
       "milestone": "v1.1.0",
-      "number": 1300,
+      "number": 6,
       "state": "closed",
       "title": "Add JSON file exporter"
     },
@@ -195,7 +195,7 @@
         "exporter"
       ],
       "milestone": "v1.1.0",
-      "number": 1299,
+      "number": 5,
       "state": "closed",
       "title": "OTLP exporter silently drops spans over batch limit"
     },
@@ -206,7 +206,7 @@
         "bug"
       ],
       "milestone": "v1.1.0",
-      "number": 1298,
+      "number": 4,
       "state": "closed",
       "title": "Config parser ignores ACME_TIMEOUT env var"
     },
@@ -217,7 +217,7 @@
         "bug"
       ],
       "milestone": "v1.0.0",
-      "number": 1297,
+      "number": 3,
       "state": "closed",
       "title": "Retry logic doesn't handle connection refused errors"
     },
@@ -228,7 +228,7 @@
         "bug"
       ],
       "milestone": "v1.0.0",
-      "number": 1296,
+      "number": 2,
       "state": "closed",
       "title": "Span duration_ms not computed when end_time is set"
     },
@@ -239,42 +239,12 @@
         "bug"
       ],
       "milestone": "v1.0.0",
-      "number": 1295,
+      "number": 1,
       "state": "closed",
       "title": "Client throws unhandled exception on 401 response"
     }
   ],
   "labels": [
-    {
-      "color": "0075ca",
-      "description": "Documentation improvements",
-      "name": "docs"
-    },
-    {
-      "color": "b60205",
-      "description": "Critical priority",
-      "name": "critical"
-    },
-    {
-      "color": "7057ff",
-      "description": "Good for newcomers",
-      "name": "good-first-issue"
-    },
-    {
-      "color": "ededed",
-      "description": "CI/CD related",
-      "name": "ci"
-    },
-    {
-      "color": "e4e669",
-      "description": "Related to exporters",
-      "name": "exporter"
-    },
-    {
-      "color": "5319e7",
-      "description": "Targeted for v2.0 release",
-      "name": "v2.0"
-    },
     {
       "color": "d73a4a",
       "description": "Something isn't working",
@@ -286,6 +256,36 @@
       "name": "enhancement"
     },
     {
+      "color": "0075ca",
+      "description": "Documentation improvements",
+      "name": "docs"
+    },
+    {
+      "color": "7057ff",
+      "description": "Good for newcomers",
+      "name": "good-first-issue"
+    },
+    {
+      "color": "b60205",
+      "description": "Critical priority",
+      "name": "critical"
+    },
+    {
+      "color": "e4e669",
+      "description": "Related to exporters",
+      "name": "exporter"
+    },
+    {
+      "color": "ededed",
+      "description": "CI/CD related",
+      "name": "ci"
+    },
+    {
+      "color": "5319e7",
+      "description": "Targeted for v2.0 release",
+      "name": "v2.0"
+    },
+    {
       "color": "ffffff",
       "description": "This will not be worked on",
       "name": "wontfix"
@@ -295,21 +295,21 @@
     {
       "description": "Initial release of the Acme SDK",
       "due_on": "2024-06-30T00:00:00Z",
-      "number": 161,
+      "number": 1,
       "state": "closed",
       "title": "v1.0.0"
     },
     {
       "description": "Exporters, batch processing, and OAuth support",
       "due_on": "2024-09-14T00:00:00Z",
-      "number": 162,
+      "number": 2,
       "state": "closed",
       "title": "v1.1.0"
     },
     {
       "description": "Major feature release: gRPC, metrics, custom attributes",
       "due_on": "2025-02-28T00:00:00Z",
-      "number": 163,
+      "number": 3,
       "state": "open",
       "title": "v2.0"
     }
@@ -322,1702 +322,8 @@
       "head": "feat/grpc-transport",
       "labels": [],
       "milestone": null,
-      "number": 1318,
-      "state": "open",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1317,
-      "state": "open",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1316,
-      "state": "open",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1294,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1293,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1292,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/readme-typo",
-      "labels": [],
-      "milestone": null,
-      "number": 1270,
-      "state": "closed",
-      "title": "Fix typo: 'recieve' \u2192 'receive' in README.md"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/readme-typo",
-      "labels": [],
-      "milestone": null,
-      "number": 1269,
-      "state": "closed",
-      "title": "fix: correct typo 'recieve' -> 'receive' in README"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1265,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1264,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1263,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/readme-typo",
-      "labels": [],
-      "milestone": null,
-      "number": 1241,
-      "state": "closed",
-      "title": "Fix typo: 'recieve' \u2192 'receive' in README.md"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1237,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1236,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1235,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/readme-typo",
-      "labels": [],
-      "milestone": null,
-      "number": 1213,
-      "state": "closed",
-      "title": "fix: correct typo 'recieve' -> 'receive' in README.md"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1208,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1207,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1206,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1184,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1183,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1182,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1160,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1159,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1158,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1136,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1135,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1134,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1112,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1111,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1110,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1088,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1087,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1086,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1064,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1063,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1062,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1040,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1039,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1038,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 1016,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 1015,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 1014,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 992,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 991,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 990,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 968,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 967,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 966,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 944,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 943,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 942,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 920,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 919,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 918,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/readme-typo",
-      "labels": [],
-      "milestone": null,
-      "number": 896,
-      "state": "closed",
-      "title": "fix: correct spelling of 'receive' in README"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 895,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 894,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 893,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/readme-typo",
-      "labels": [],
-      "milestone": null,
-      "number": 871,
-      "state": "closed",
-      "title": "docs: fix typo 'recieve' -> 'receive' in README"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 870,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 869,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 868,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 845,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 844,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 843,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 820,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 819,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 818,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 795,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 794,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 793,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 771,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 770,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 769,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/readme-typo",
-      "labels": [],
-      "milestone": null,
-      "number": 747,
-      "state": "closed",
-      "title": "fix: correct typo 'recieve' \u2192 'receive' in README"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 746,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 745,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 744,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/readme-typo",
-      "labels": [],
-      "milestone": null,
-      "number": 722,
-      "state": "closed",
-      "title": "fix: correct typo 'recieve' \u2192 'receive' in README"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 721,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 720,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 719,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 696,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 695,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 694,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 671,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 670,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 669,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 646,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 645,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 644,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 621,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 620,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 619,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 596,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 595,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 594,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 571,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 570,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 569,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 546,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 545,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 544,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 521,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 520,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 519,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 496,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 495,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 494,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 471,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 470,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 469,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 448,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 447,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 446,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 423,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 422,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 421,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 398,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 397,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 396,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 373,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 372,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 371,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 348,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 347,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 346,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 324,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 293,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 292,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 291,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 269,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 268,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 267,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 245,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 244,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 243,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 221,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 220,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 219,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 197,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 196,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 195,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 88,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 87,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 86,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/issue-55",
-      "labels": [],
-      "milestone": null,
-      "number": 64,
-      "state": "closed",
-      "title": "fix: correct typo 'recieve' to 'receive' in README.md"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 63,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 62,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 61,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
-      "number": 39,
-      "state": "closed",
-      "title": "Draft: gRPC transport for OTLP"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "ci/add-python-3.12",
-      "labels": [],
-      "milestone": null,
-      "number": 38,
-      "state": "closed",
-      "title": "Add Python 3.12 to CI matrix"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": false,
-      "head": "fix/batch-shutdown",
-      "labels": [],
-      "milestone": null,
-      "number": 37,
-      "state": "closed",
-      "title": "Fix batch exporter shutdown race condition"
-    },
-    {
-      "assignees": [],
-      "base": "main",
-      "draft": true,
-      "head": "feat/grpc-transport",
-      "labels": [],
-      "milestone": null,
       "number": 24,
-      "state": "closed",
+      "state": "open",
       "title": "Draft: gRPC transport for OTLP"
     },
     {
@@ -2028,7 +334,7 @@
       "labels": [],
       "milestone": null,
       "number": 23,
-      "state": "closed",
+      "state": "open",
       "title": "Add Python 3.12 to CI matrix"
     },
     {
@@ -2039,7 +345,7 @@
       "labels": [],
       "milestone": null,
       "number": 22,
-      "state": "closed",
+      "state": "open",
       "title": "Fix batch exporter shutdown race condition"
     }
   ]

@@ -446,7 +446,7 @@ echo "  Created PR: $PR1_URL"
 PR1_NUM=$(echo "$PR1_URL" | grep -oE '[0-9]+$' || true)
 if [[ -n "$PR1_NUM" ]]; then
   gh api repos/"$REPO"/pulls/"$PR1_NUM"/reviews --method POST \
-    -f body="LGTM! The atexit handler approach is solid. Verified that the flush completes before exit. Approved by Bob." \
+    -f body="LGTM! The atexit handler approach is solid. Verified that the flush completes before exit. Reviewed by Bob." \
     -f event="COMMENT" 2>/dev/null || true
   echo "  Added review comment to PR #${PR1_NUM}"
 fi

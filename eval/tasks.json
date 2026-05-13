@@ -172,7 +172,7 @@
           "Add Python 3.12 to CI matrix",
           "Draft: gRPC transport for OTLP"
         ],
-        "explanation": "PR #{{PR_FIX_BATCH}} has an approval from Bob. PRs #{{PR_CI_MATRIX}} and #{{PR_GRPC_DRAFT}} have no reviews."
+        "explanation": "PR #{{PR_FIX_BATCH}} has a review comment. PRs #{{PR_CI_MATRIX}} and #{{PR_GRPC_DRAFT}} have no reviews."
       }
     },
     {
@@ -350,7 +350,7 @@
         "type": "llm_judge",
         "criteria": [
           "Lists all 3 open PRs",
-          "Reports review status: PR #{{PR_FIX_BATCH}} approved, PR #{{PR_CI_MATRIX}} no reviews, PR #{{PR_GRPC_DRAFT}} no reviews (draft)",
+          "Reports review status: PR #{{PR_FIX_BATCH}} has a review comment, PR #{{PR_CI_MATRIX}} no reviews, PR #{{PR_GRPC_DRAFT}} no reviews (draft)",
           "Reports CI status for each PR",
           "Reports merge conflict status",
           "Reports age or creation date for each PR"
