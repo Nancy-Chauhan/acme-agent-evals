@@ -10,6 +10,15 @@ The benchmark is designed around a simple question:
 > When the task, target repository, tool boundary, and evaluator stay fixed, how
 > much does downstream agent behavior change as the model changes?
 
+## Acknowledgements
+
+This project was inspired by and adapted from the
+[Acme SDK Python](https://github.com/seldo/acme-sdk-python) evaluation used in
+Laurie Voss's
+[MCP vs CLI skills work](https://arize.com/blog/mcp-vs-cli-skills-for-agents-what-our-eval-found-and-which-you-should-use/).
+This repo extends that benchmark shape with a vendor-neutral pi.dev harness,
+raw model baseline, and model-drift analysis workflow.
+
 ## What Is In This Repo
 
 - `src/acme_sdk/` — fictional Python SDK used as the target project.
