@@ -9,6 +9,7 @@ import json
 import logging
 import os
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -40,9 +41,9 @@ def configure_logging() -> None:
 def local_results_path() -> Path:
     out_dir = HARNESS_ROOT / "outputs" / "raw"
     out_dir.mkdir(parents=True, exist_ok=True)
-    import time
 
-    return out_dir / f"results-{time.strftime('%Y%m%d-%H%M%S')}.jsonl"
+    stamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+    return out_dir / f"results-{stamp}-pid{os.getpid()}.jsonl"
 
 
 def experiment_results_path(experiment_name: str) -> Path:
@@ -294,6 +295,8 @@ def run_read_tasks(
     results_path: Path,
     runner: str,
     dry_run: bool,
+    dataset_id_override: str | None = None,
+    experiment_prefix_override: str | None = None,
 ) -> None:
     if not tasks:
         return
@@ -301,8 +304,11 @@ def run_read_tasks(
         asyncio.run(run_local_tasks(tasks, models, repo, fixture_worktree, skill_path, thinking, runs, run_offset, results_path, runner))
         return
 
-    experiment_prefix = "raw-baseline-read" if runner == "raw" else "pi-harness-read"
-    dataset_id = create_dataset(client, tasks, dataset_name(experiment_prefix))
+    experiment_prefix = (
+        experiment_prefix_override
+        or ("raw-baseline-read" if runner == "raw" else "pi-harness-read")
+    )
+    dataset_id = dataset_id_override or create_dataset(client, tasks, dataset_name(experiment_prefix))
     for model in models:
         for run_index in range(run_offset, run_offset + runs):
             run_arize_experiment(
@@ -421,6 +427,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--run-offset", type=int, default=0, help="Zero-based run index to start from")
     parser.add_argument("--thinking", default=os.environ.get("PI_THINKING", "medium"))
     parser.add_argument("--runner", choices=["pi", "raw"], default=os.environ.get("RUNNER", "pi"))
+    parser.add_argument("--dataset-id", default=os.environ.get("ARIZE_DATASET_ID"), help="Existing Arize dataset id to append experiments to")
+    parser.add_argument("--experiment-prefix", default=os.environ.get("EXPERIMENT_PREFIX"), help="Experiment name prefix")
     parser.add_argument("--dry-run", action="store_true", help="Run locally without Arize logging")
     parser.add_argument("--allow-writes", action="store_true", help="Allow write tasks to mutate GitHub")
     return parser.parse_args()
@@ -469,6 +477,8 @@ def main() -> None:
         results_path,
         args.runner,
         args.dry_run,
+        args.dataset_id,
+        args.experiment_prefix,
     )
     run_write_tasks(
         client,
