@@ -97,11 +97,11 @@
       "tier": 2,
       "category": "read",
       "expected_steps": 3,
-      "description": "Look at the last 10 merged PRs. What percentage of them modified files in the `tests/` directory?",
+      "description": "Look at the last 10 merged PRs. What percentage of them modified files in the `tests/` directory? If there are no merged PRs, answer `0%`.",
       "expected_output": {
         "type": "exact",
         "value": 0,
-        "explanation": "setup_github.sh creates 3 open PRs but no merged PRs. The agent should report 0 merged PRs."
+        "explanation": "setup_github.sh creates 3 open PRs but no merged PRs. The agent should report 0% rather than N/A for the empty set."
       }
     },
     {
@@ -180,7 +180,7 @@
       "tier": 2,
       "category": "read",
       "expected_steps": 4,
-      "description": "Find all issues labeled `exporter`. How many are open vs. closed?",
+      "description": "Find all issues labeled `exporter`. How many are open vs. closed? Also list the open exporter issue titles.",
       "expected_output": {
         "type": "structured",
         "value": {
